@@ -1,0 +1,98 @@
+﻿@model NiceAdmin.Models.OrderModel
+<main id="main" class="main">
+
+    <div class="pagetitle">
+    </div><!-- End Page Title -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Insert Order Details</h5>
+
+            <!-- General Form Elements -->
+            <form>
+                <div class="row mb-3">
+                    @* <label for="inputText" class="col-sm-2 col-form-label">Order Detail ID</label> *@
+                    <div class="col-sm-10">
+                        <input asp-for="OrderID" type="hidden" class="form-control">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputDate" class="col-sm-2 col-form-label">OrderNumber</label>
+                    <div class="col-sm-10">
+                        <input asp-for="OrderNumber" type="text" class="form-control" />
+                        <span asp-validation-for="OrderNumber" class="text-danger"></span>
+
+                    </div>
+                    </div>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Order Date</label>
+                    <div class="col-sm-10">
+                        <input asp-for="OrderDate" type="date" class="form-control" />
+                            <span asp-validation-for="OrderDate" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputDate" class="col-sm-2 col-form-label">CustomerName</label>
+                    <div class="col">
+                        <select class="form-control" asp-for="CustomerID">
+                            <option disabled selected="true" value="0">Select User</option>
+                            @foreach (var cust in ViewBag.CustomerList)
+                            {
+                                <option value=@cust.CustomerID>@cust.CustomerName</option>
+                            }
+                        </select>
+                        <span asp-validation-for="CustomerID" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Payment Mode</label>
+                    <div class="col-sm-10">
+                        <input asp-for="PaymentMode" type="text" class="form-control" />
+                            <span asp-validation-for="PaymentMode" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputNumber" class="col-sm-2 col-form-label">Total Amount</label>
+                    <div class="col-sm-10">
+                        <input asp-for="TotalAmount" type="text" class="form-control" />
+                            <span asp-validation-for="TotalAmount" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputDate" class="col-sm-2 col-form-label">Address</label>
+                    <div class="col-sm-10">
+                        <input asp-for="ShippingAddress" type="text" class="form-control" />
+                            <span asp-validation-for="ShippingAddress" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputDate" class="col-sm-2 col-form-label">UserName</label>
+                    <div class="col">
+                        <select class="form-control" asp-for="UserID">
+                            <option disabled selected="true" value="0">Select User</option>
+                            @foreach (var user in ViewBag.UserList)
+                            {
+                                <option value=@user.UserID>@user.UserName</option>
+                            }
+                        </select>
+                        <span asp-validation-for="UserID" class="text-danger"></span>
+
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <button type="submit" asp-action="SaveOrder" class="btn btn-primary">Save</button>
+
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+            </form><!-- End General Form Elements -->
+
+        </div>
+    </div>
+
+</main><!-- End #main -->

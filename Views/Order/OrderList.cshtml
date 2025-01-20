@@ -1,0 +1,92 @@
+﻿@using System.Data
+
+<main id="main" class="main">
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+
+            <p>@TempData["ErrorMessage"]</p>
+
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Orders</h5>
+                        <div class="text-end">
+                        <a asp-controller="Order" asp-action="AddOrderForm">
+                            <button type="submit" class="btn btn-primary mb-3">Add Order</button>
+                        </a>
+                            <a asp-controller="Order" asp-action="OrderListToExcel">
+
+                                <button class="btn btn-success mb-3" onclick="ProductExcel">Export Excel</button>
+                            </a>
+                            <a asp-controller="Order" asp-action="OrderListToPDF">
+
+                                <button class="btn btn-warning mb-3">Export pdf</button>
+
+
+                            </a>
+                        </div>
+                        <!-- Table with stripped rows -->
+                        <div style="overflow-x: auto;">
+                            @if (Model == null)
+                            {
+                                <p>No data available</p>
+                            }
+                            else
+                            {
+                                <table class="table datatable">
+                                    <thead>
+                                        <tr>
+                                              <th>OrderID</th>  
+                                            <th>OrderDate</th>
+                                            <th>OrderNumber</th>
+                                            <th>PaymentMode</th>
+                                            <th>ShippingAddress</th>
+                                            <th>TotalAmount</th>
+                                            <th>MobileNo</th>
+                                            <th>Email</th>
+                                            <th>Action</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (DataRow row in Model.Rows)
+                                        {
+                                            <tr>
+                                                <td>@row["OrderID"]</td>  
+                                                <td>@row["OrderDate"]</td>
+                                                <td>@row["OrderNumber"]</td>
+                                                <td>@row["PaymentMode"]</td>
+                                                <td>@row["ShippingAddress"]</td>
+                                                <td>@row["TotalAmount"]</td>
+                                                <td>@row["MobileNo"]</td>
+                                                <td>@row["Email"]</td>
+                                               
+                                                <td class="d-flex justify-content-start">
+                                                    <a class="btn btn-outline-success btn-xs me-2" asp-controller="Order" asp-action="OrderAddEdit" asp-route-OrderID="@row["OrderID"]">
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                    </a>
+                                                    <a class="btn btn-outline-danger btn-xs" onclick="return confirm('are u sure want to delete ?')" asp-action="OrderDeletee" asp-route-OrderID="@row["OrderID"]">
+                                                        <i class="bi bi-trash-fill"></i>
+                                                    </a>
+                                                   
+
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            }
+                        </div>
+                        <!-- End Table with stripped rows -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main><!-- End #main -->

@@ -1,0 +1,97 @@
+﻿@using System.Data
+
+<main id="main" class="main">
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+
+            <h3>@TempData["id"]</h3>
+            <p>@TempData["ErrorMessage"]</p>
+
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Customers</h5>
+                        <div class="text-end">
+                            <a asp-controller="Customer" asp-action="AddCustomerForm">
+                                <button type="submit" class="btn btn-primary mb-3">Add Customer</button>
+                            </a>
+                            <a asp-controller="Customer" asp-action="CustomerListToExcel">
+
+                                <button class="btn btn-success mb-3" onclick="ProductExcel">Export Excel</button>
+                            </a>
+                            <a asp-controller="Customer" asp-action="CustomerListToPDF">
+
+                                <button class="btn btn-warning mb-3">Export pdf</button>
+
+
+                            </a>
+                        </div>
+                        <!-- Table with stripped rows -->
+                        <div style="overflow-x: auto;">
+                            @if (Model == null)
+                            {
+                                <p>No data available</p>
+                            }
+                            else
+                            {
+                                <table class="table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>CustomerID</th>
+                                            <th>CustomerName</th>
+                                            <th>HomeAddress</th>
+                                            <th>Email</th>
+                                            <th>MobileNo</th>
+                                            <th>GSTNO</th>
+                                            <th>CityName</th>
+                                            <th>PinCode</th>
+                                            <th>NetAmount</th>
+                                            <th>UserName</th>
+                                            <th>Action</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (DataRow row in Model.Rows)
+                                        {
+                                            <tr>
+                                                <td>@row["CustomerID"]</td>
+                                                <td>@row["CustomerName"]</td>
+                                                <td>@row["HomeAddress"]</td>
+                                                <td>@row["Email"]</td>
+                                                <td>@row["MobileNo"]</td>
+                                                <td>@row["GST_NO"]</td>
+                                                <td>@row["CityName"]</td>
+                                                <td>@row["PinCode"]</td>
+                                                <td>@row["NetAmount"]</td>
+                                                <td>@row["UserName"]</td>
+                                                <td class="d-flex justify-content-start">
+                                                    <a class="btn btn-outline-success btn-xs me-2" asp-controller="Customer" asp-action="CustomerAddEdit" asp-route-CustomerID="@row["CustomerID"]">
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                    </a>
+                                                    <a onclick="return confirm('are u sure want to delete ?')" asp-controller="Customer" asp-action="CustomerDelete" asp-route-CustID="@row["CustomerID"]" class="btn btn-outline-danger btn-xs" >
+                                                        <i class="bi bi-trash-fill"></i>
+                                                    </a>
+                                                   
+                                                    
+
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            }
+                        </div>
+                        <!-- End Table with stripped rows -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main><!-- End #main -->

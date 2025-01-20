@@ -1,0 +1,43 @@
+﻿@model List<NiceAdmin.Models.ProjectModel>;
+
+<main id="main" class="main">
+    
+    <h2 class="text-center">Project Details</h2>
+    <div class="container">
+        <div class="text-end mb-1">
+            <a asp-action="AddEmployee"><button class="btn btn-primary">Add </button></a>
+        </div>
+    <table class="table">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Project ID</th>
+                    <th scope="col">Project Name</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                    <th scope="col">Budget</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example row, you can add multiple rows like this -->
+                    @foreach (var prj in Model)
+                    {
+                        <tr>
+                            <td>@prj.ProjectID</td>
+                            <td>@prj.ProjectName</td>
+                            <td>@prj.StartDate</td>
+                            <td>@prj.EndDate</td>
+                            <td>@prj.Budget</td>
+                            <td>
+                                <a asp-action="AddEmployee"><button class="btn btn-warning btn-sm">Edit</button></a>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                    }
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </table>
+    
+</main><!-- End #main -->

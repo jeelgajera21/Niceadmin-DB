@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model NiceAdmin.Models.Employee
+<main id="main" class="main">
+
+
+    <div class="container mt-5">
+        <h2 class="text-center">Employee Form</h2>
+        <form method="post" asp-action="SaveEmployee">
+            <div class="form-group">
+                <label asp-for="FirstName">First Name</label>
+                <input asp-for="FirstName" type="text" class="form-control" id="firstName"  placeholder="Enter first name" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName">Last Name</label>
+                <input asp-for="LastName" type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email">Email</label>
+                <input asp-for="Email" type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber">Phone Number</label>
+                <input asp-for="PhoneNumber" type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Enter phone number" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="HireDate">Hire Date</label>
+                <input asp-for="HireDate" type="date" class="form-control" id="hireDate" name="hireDate" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobTitle">Job Title</label>
+                <input asp-for="JobTitle" type="text" class="form-control" id="jobTitle" name="jobTitle" placeholder="Enter job title" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salary">Salary</label>
+                <input asp-for="Salary" type="number" class="form-control" id="salary" name="salary" placeholder="Enter salary" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepartmentID">Department ID</label>
+                <input asp-for="DepartmentID" type="number" class="form-control" id="departmentId" name="departmentId" placeholder="Enter department ID" required>
+            </div>
+            <input asp-for="EID" type="hidden" />
+            <input type="submit" action="Submit" class="btn btn-primary" />
+        </form>
+    </div>
+
+</main><!-- End #main -->

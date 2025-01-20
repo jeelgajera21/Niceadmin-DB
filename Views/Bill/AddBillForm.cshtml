@@ -1,0 +1,97 @@
+﻿@model NiceAdmin.Models.BillModel
+@{
+ var userName = Context?.Session?.GetString("UserName") ?? "Guest";
+}
+<main id="main" class="main">
+   
+    
+
+    <div class="pagetitle">
+    </div><!-- End Page Title -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Insert Bill Details</h5>
+
+            <!-- General Form Elements -->
+            <form>
+                <div class="row mb-3">
+                    @* <label for="inputText" class="col-sm-2 col-form-label">Bill ID</label> *@
+                    <div class="col-sm-10">
+                        <input asp-for="BillID" type="hidden" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Bill Number</label>
+                    <div class="col-sm-10">
+                        <input asp-for="BillNumber" type="text" class="form-control">
+                        <span asp-validation-for="BillNumber" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Bill Date</label>
+                    <div class="col-sm-10">
+                        <input asp-for="BillDate" type="date" class="form-control">
+                        <span asp-validation-for="BillDate" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputDate" class="col-sm-2 col-form-label">Order Number</label>
+                    <div class="col">
+                        <select class="form-control" asp-for="OrderID">
+                            <option value="0">Select Order</option>
+                            @foreach (var order in ViewBag.OrderList)
+                            {
+                                <option value=@order.OrderID>@order.OrderNumber</option>
+                            }
+                        </select>
+                        <span asp-validation-for="OrderID" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputNumber" class="col-sm-2 col-form-label">Total Amount</label>
+                    <div class="col-sm-10">
+                        <input asp-for="TotalAmount" type="number" class="form-control">
+                        <span asp-validation-for="TotalAmount" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputDate" class="col-sm-2 col-form-label">Discount</label>
+                    <div class="col-sm-10">
+                        <input asp-for="Discount" type="number" class="form-control">
+                        <span asp-validation-for="Discount" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputDate" class="col-sm-2 col-form-label">NetAmount</label>
+                    <div class="col-sm-10">
+                        <input asp-for="NetAmount" type="number" class="form-control">
+                        <span asp-validation-for="NetAmount" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputDate" class="col-sm-2 col-form-label">UserName</label>
+                    <input asp-for="UserID" type="hidden" class="form-control" value="@userName">
+
+                    <div class="col">
+                        
+                </div>
+                <div class="text-center">
+                    <button type="submit" asp-action="SaveBill" class="btn btn-primary">Save</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+            </form><!-- End General Form Elements -->
+
+        </div>
+    </div>
+
+</main><!-- End #main -->
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

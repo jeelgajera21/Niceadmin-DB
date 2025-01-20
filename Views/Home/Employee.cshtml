@@ -1,0 +1,55 @@
+﻿@model List<NiceAdmin.Models.Employee>;
+
+
+<main id="main" class="main">
+    <h2 class="text-center">Employee Details</h2>
+    <div class="container">
+        <div class="text-end mb-3">
+            <a asp-action="AddEmployee"><button class="btn btn-primary">Add </button></a>
+        </div>
+   
+    <table class="table table-bordered ">
+        <thead class="thead-dark ">
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Hire Date</th>
+                <th scope="col">Job Title</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Department </th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example row, you can add multiple rows like this -->
+                @foreach (var emp in Model)
+                {
+                    <tr>
+                        <td>@emp.FirstName</td>
+                        <td>@emp.LastName</td>
+                        <td>@emp.Email</td>
+                        <td>@emp.PhoneNumber</td>
+                        <td>@emp.HireDate</td>
+                        <td>@emp.JobTitle</td>
+                        <td>@emp.Salary</td>
+                        <td>@emp.DepartmentID</td>
+                        <td>
+                            <form >
+                                <input type="hidden"  />
+                            <a asp-action="AddEmployee"><button class="btn btn-warning btn-sm">Edit</button></a>
+                            </form>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                    </tr>
+                }
+            
+            <!-- Add more rows as needed -->
+        </tbody>
+
+    </table>
+
+
+    </div>
+</main><!-- End #main -->

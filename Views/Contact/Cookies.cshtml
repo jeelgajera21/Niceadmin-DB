@@ -1,0 +1,21 @@
+﻿
+<main id="main" class="main ">
+
+
+    <a asp-action="CreateCookies"><button class="btn btn-success">Create</button></a>
+    <a asp-action="ReadCookies"><button class="btn btn-primary">Read</button></a>
+    <a asp-action="RemoveCookies"><button class="btn btn-danger">Remove</button></a>
+
+    <div>
+
+        @if (TempData["Cookie"] != null)
+        {
+            <p>Cookie: @TempData["Cookie"]</p>
+        }
+        else
+        {
+            <p>No cookie found.</p>
+        }
+    </div>
+
+</main>

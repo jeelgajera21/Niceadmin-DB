@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<main id="main" class="main">
+    <div class="container mt-5">
+        <h2 class="text-center">Project Form</h2>
+
+    <form>
+        <div class="form-group">
+            <label for="projectId">Project ID</label>
+            <input type="number" class="form-control" id="projectId" name="projectId" placeholder="Enter project ID" required>
+        </div>
+        <div class="form-group">
+            <label for="projectName">Project Name</label>
+            <input type="text" class="form-control" id="projectName" name="projectName" placeholder="Enter project name" required>
+        </div>
+        <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" class="form-control" id="startDate" name="startDate" required>
+        </div>
+        <div class="form-group">
+            <label for="endDate">End Date</label>
+            <input type="date" class="form-control" id="endDate" name="endDate" required>
+        </div>
+        <div class="form-group">
+            <label for="budget">Budget</label>
+            <input type="number" class="form-control" id="budget" name="budget" placeholder="Enter budget" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    </div>
+</main><!-- End #main -->
