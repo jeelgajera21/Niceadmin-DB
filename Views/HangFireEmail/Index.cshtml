@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "HangFire Email Page";
+}
+
+<main id="main" class="main">
+    <div>HangFire Email Page
+
+    <form  method="post">
+        <input type="email" name="email" placeholder="Enter email" />
+        <button asp-controller="HangFireEmail" asp-action="SendEmailReminder" type="submit">Send Reminder</button>
+       
+
+    </form>
+    </div>
+    <hr class="text-danger " style="border: 5px solid red;border-radius: 5px;" />
+    <div>
+    <!-- General Form Elements -->
+        <form asp-controller="HangFireEmail" asp-action="SendEmail" method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="body">Body</label>
+                <textarea id="body" name="body" class="form-control" rows="4"></textarea>
+            </div>
+
+            @if (ViewBag.Message != null)
+            {
+                <div class="alert alert-info">
+                    @ViewBag.Message
+                </div>
+            }
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Send Email</button>
+            </div>
+        </form>
+
+
+    </div>
+    <hr class="text-danger " style="border: 5px solid red;border-radius: 5px;" />
+    <div>
+
+        <form method="post" action="@Url.Action("ScheduleEmailReminder", "HangFireEmail")">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label for="minutes">Minutes:</label>
+                <input type="number" id="minutes" name="minutes" class="form-control" required min="1" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Schedule Email</button>
+        </form>
+
+    </div>
+</main>

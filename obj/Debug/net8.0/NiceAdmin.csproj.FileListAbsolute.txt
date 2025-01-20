@@ -69,3 +69,4 @@ E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\sv\Hangfire.Core.resources.dll
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\tr-TR\Hangfire.Core.resources.dll
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\zh-TW\Hangfire.Core.resources.dll
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\zh\Hangfire.Core.resources.dll
+E:\sem 5\.net\Audi\NiceAdmin\obj\Debug\net8.0\NiceAdmin.sourcelink.json
