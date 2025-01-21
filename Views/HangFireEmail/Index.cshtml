@@ -8,7 +8,25 @@
 
     <form  method="post">
         <input type="email" name="email" placeholder="Enter email" />
-        <button asp-controller="HangFireEmail" asp-action="SendEmailReminder" type="submit">Send Reminder</button>
+            
+
+
+            <button asp-controller="HangFireEmail" asp-action="SendEmailReminder" id="showAlert" type="submit">Send Reminder</button>
+            @if (ViewBag.RemMessage != null)
+            {
+                <div id="alertMessage1" class="alert alert-info">
+                    @ViewBag.RemMessage
+                </div>
+
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        setTimeout(function () {
+                            $("#alertMessage1").fadeOut("slow"); // Hides message after 2 seconds
+                        }, 2000);
+                    });
+                </script>
+            }
        
 
     </form>
@@ -32,16 +50,26 @@
                 <textarea id="body" name="body" class="form-control" rows="4"></textarea>
             </div>
 
-            @if (ViewBag.Message != null)
-            {
-                <div class="alert alert-info">
-                    @ViewBag.Message
-                </div>
-            }
+            
 
             <div class="text-center">
                 <button type="submit" class="btn btn-primary">Send Email</button>
             </div>
+            @if (ViewBag.EmailMessage != null)
+            {
+                <div id="alertMessage2" class="alert alert-info">
+                    @ViewBag.EmailMessage
+                </div>
+
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        setTimeout(function () {
+                            $("#alertMessage2").fadeOut("slow"); // Hides message after 2 seconds
+                        }, 2000);
+                    });
+                </script>
+            }
         </form>
 
 
@@ -57,11 +85,30 @@
 
             <div class="form-group">
                 <label for="minutes">Minutes:</label>
-                <input type="number" id="minutes" name="minutes" class="form-control" required min="1" />
+                <input type="datetime-local" id="dateTime" name="dateTime" class="form-control" required />
+
             </div>
-
+           
             <button type="submit" class="btn btn-primary">Schedule Email</button>
-        </form>
+            @if (ViewBag.ScheduleMessage != null)
+            {
+                <div id="alertMessage3" class="alert alert-info">
+                    @ViewBag.ScheduleMessage
+                </div>
 
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        setTimeout(function () {
+                            $("#alertMessage3").fadeOut("slow"); // Hides message after 2 seconds
+                        }, 2000);
+                    });
+                </script>
+            }
+        </form>
+       
     </div>
+    
 </main>
+
+

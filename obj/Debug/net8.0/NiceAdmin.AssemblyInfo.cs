@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NiceAdmin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ff04161dcf65511ec848ba4ff416432490015e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b771aab497ca494ac88ccd2e08165add92a5a1f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("NiceAdmin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NiceAdmin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

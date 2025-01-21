@@ -4,7 +4,7 @@ using Microsoft.Extensions.Options;
 using MimeKit;
 using NiceAdmin.Models;
 using MailKit.Net.Smtp;
-
+using System.Globalization;
 
 namespace NiceAdmin.Controllers
 {
@@ -54,20 +54,43 @@ namespace NiceAdmin.Controllers
         {
             _backgroundJobClient.Enqueue(() => SendEmail(email, "Reminder Email", "This is your reminder!"));
 
-            return Ok("Email reminder scheduled!");
+            
+            ViewBag.RemMessage = "Email reminder sent!";
+            ViewBag.ShowAlert = true; // Set flag
+            return View("Index");
         }
 
         // 🔹 Delayed Job (Runs After a Delay)
-        [HttpPost("schedule-email")]
-        public IActionResult ScheduleEmailReminder(string email, int minutes)
-        {
-            _backgroundJobClient.Schedule(() => SendEmail(email, "Scheduled Reminder", "Your scheduled reminder!"), TimeSpan.FromMinutes(minutes));
+      
 
-            return Ok($"Email scheduled to be sent in {minutes} minutes!");
+[HttpPost("schedule-email")]
+    public IActionResult ScheduleEmailReminder(string email, string dateTime)
+    {
+        if (!DateTime.TryParseExact(dateTime, "yyyy-MM-ddTHH:mm",
+            CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime scheduledDateTime))
+        {
+            return BadRequest("Invalid date-time format. Use 'yyyy-MM-ddTHH:mm'.");
         }
 
-        // 🔹 Recurring Job (Runs Repeatedly at a Specific Time)
-        [HttpPost("set-daily-reminder")]
+        DateTime now = DateTime.Now;
+        if (scheduledDateTime <= now)
+        {
+            return BadRequest("Scheduled time must be in the future.");
+        }
+
+        TimeSpan delay = scheduledDateTime - now;
+        _backgroundJobClient.Schedule(() => SendEmail(email, $"Scheduled Email Reminder", $"Dear {email},\r\n\r\nThis is a friendly reminder for your scheduled event.\r\n\r\n📅 Date & Time: {scheduledDateTime}\r\n📌 Details: [Mention any important details related to the event or task]\r\n\r\nIf you have any questions or need to reschedule, feel free to reach out.\r\n\r\nBest regards,\r\nTo-Do\r\nMascot"), delay);
+
+        
+            ViewBag.ScheduleMessage = $"Email scheduled for {scheduledDateTime:dd-MM-yyyy HH:mm}";
+            return View("Index");
+        }
+
+
+
+
+    // 🔹 Recurring Job (Runs Repeatedly at a Specific Time)
+    [HttpPost("set-daily-reminder")]
         public IActionResult SetDailyReminder(string email)
         {
             _recurringJobManager.AddOrUpdate(
@@ -85,13 +108,13 @@ namespace NiceAdmin.Controllers
         {
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(subject) || string.IsNullOrEmpty(body))
             {
-                ViewBag.Message = "Email, Subject or Body is missing!";
+                ViewBag.EmailMessage = "Email, Subject or Body is missing!";
                 return View(); // Return to the same page without redirection
             }
 
             if (_mailSettings == null)
             {
-                ViewBag.Message = "Mail settings are not properly configured.";
+                ViewBag.EmailMessage = "Mail settings are not properly configured.";
                 return View(); // Return to the same page without redirection
             }
 
@@ -100,7 +123,7 @@ namespace NiceAdmin.Controllers
                 var message = new MimeMessage();
                 if (message == null)
                 {
-                    ViewBag.Message = "MimeMessage could not be created.";
+                    ViewBag.EmailMessage = "MimeMessage could not be created.";
                     return View(); // Return to the same page without redirection
                 }
 
@@ -116,7 +139,7 @@ namespace NiceAdmin.Controllers
                 {
                     if (client == null)
                     {
-                        ViewBag.Message = "SMTP Client could not be created.";
+                        ViewBag.EmailMessage = "SMTP Client could not be created.";
                         return View(); // Return to the same page without redirection
                     }
 
@@ -126,12 +149,12 @@ namespace NiceAdmin.Controllers
                     client.Disconnect(true);
                 }
 
-                ViewBag.Message = "Email sent successfully!";
+                ViewBag.EmailMessage = "Email sent successfully!";
                 return View("Index"); // Return to the same page without redirection
             }
             catch (Exception ex)
             {
-                ViewBag.Message = "Error sending email: " + ex.Message;
+                ViewBag.EmailMessage = "Error sending email: " + ex.Message;
                 return View("Index"); // Return to the same page without redirection
             }
         }
