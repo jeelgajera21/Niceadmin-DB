@@ -3,14 +3,14 @@
     <StaticWebAssetEndpoint Include="_content/NiceAdmin/assets/css/style.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\style.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-FzYqDWFULo415IRkL1Kx1nsc5EVNKyw5ikAfdeQOW6Y="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"20978"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022FzYqDWFULo415IRkL1Kx1nsc5EVNKyw5ikAfdeQOW6Y=\u0022"},{"Name":"Last-Modified","Value":"Fri, 06 Dec 2024 04:57:22 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-j151mQhwlNlq1v8nS82zgYOozg28SGy3UFJMpZBR598="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"22625"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022j151mQhwlNlq1v8nS82zgYOozg28SGy3UFJMpZBR598=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Jan 2025 05:43:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/NiceAdmin/assets/css/style.n04rld2l1u.css">
+    <StaticWebAssetEndpoint Include="_content/NiceAdmin/assets/css/style.f4zzqunbnh.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\style.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"n04rld2l1u"},{"Name":"integrity","Value":"sha256-FzYqDWFULo415IRkL1Kx1nsc5EVNKyw5ikAfdeQOW6Y="},{"Name":"label","Value":"_content/NiceAdmin/assets/css/style.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"20978"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022FzYqDWFULo415IRkL1Kx1nsc5EVNKyw5ikAfdeQOW6Y=\u0022"},{"Name":"Last-Modified","Value":"Fri, 06 Dec 2024 04:57:22 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"f4zzqunbnh"},{"Name":"integrity","Value":"sha256-j151mQhwlNlq1v8nS82zgYOozg28SGy3UFJMpZBR598="},{"Name":"label","Value":"_content/NiceAdmin/assets/css/style.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"22625"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022j151mQhwlNlq1v8nS82zgYOozg28SGy3UFJMpZBR598=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Jan 2025 05:43:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/NiceAdmin/assets/img/apple-touch-icon.k5niu5bqjf.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\apple-touch-icon.png'))</AssetFile>
