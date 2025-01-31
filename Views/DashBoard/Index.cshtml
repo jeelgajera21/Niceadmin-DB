@@ -29,14 +29,37 @@
                                 <th>Navigate to</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            @foreach (var link in Model.NavigationLinks)
-                            {
-                                <tr>
-                                    <td><a asp-action="@link.ActionMethodName" asp-controller="@link.ControllerName">@link.LinkName</a></td>
-                                </tr>
-                            }
-                        </tbody>
+                            <tbody>
+                                @foreach (var link in Model.NavigationLinks)
+                                {
+
+                                    var countryCount = Model.Counts.FirstOrDefault(c => c.Metric == "TotalCountry")?.Value ?? 0;
+                                    var cityCount = Model.Counts.FirstOrDefault(c => c.Metric == "TotalCity")?.Value ?? 0;
+                                    var stateCount = Model.Counts.FirstOrDefault(c => c.Metric == "TotalState")?.Value ?? 0;
+
+
+                                    string countText = link.LinkName switch
+                                    {
+                                        "Country" => $"{countryCount}",
+                                        "City" => $"{cityCount}",
+                                        "State" => $"{stateCount}",
+                                        _ => string.Empty // Default for other links
+                                    };
+
+                                    <tr>
+                                        <td>
+                                            <a asp-action="@link.ActionMethodName"
+                                               asp-controller="@link.ControllerName">
+                                                @link.LinkName
+                                            </a>
+                                        </td>
+                                        <td>
+                                            @countText
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
                     </table>
                 </div>
             </div>

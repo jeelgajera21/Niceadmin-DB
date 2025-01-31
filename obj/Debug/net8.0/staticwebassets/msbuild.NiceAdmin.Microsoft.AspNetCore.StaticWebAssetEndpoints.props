@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/NiceAdmin/assets/css/style.825wsxuick.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\style.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"825wsxuick"},{"Name":"integrity","Value":"sha256-oAGUNHmrZ8tm34xpi0rRQHJK\u002BvhMV6Ipy1NDk1LJgVU="},{"Name":"label","Value":"_content/NiceAdmin/assets/css/style.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"21014"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022oAGUNHmrZ8tm34xpi0rRQHJK\u002BvhMV6Ipy1NDk1LJgVU=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Jan 2025 05:47:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/NiceAdmin/assets/css/style.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\style.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-j151mQhwlNlq1v8nS82zgYOozg28SGy3UFJMpZBR598="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"22625"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022j151mQhwlNlq1v8nS82zgYOozg28SGy3UFJMpZBR598=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Jan 2025 05:43:53 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/NiceAdmin/assets/css/style.f4zzqunbnh.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\style.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"f4zzqunbnh"},{"Name":"integrity","Value":"sha256-j151mQhwlNlq1v8nS82zgYOozg28SGy3UFJMpZBR598="},{"Name":"label","Value":"_content/NiceAdmin/assets/css/style.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"22625"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022j151mQhwlNlq1v8nS82zgYOozg28SGy3UFJMpZBR598=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Jan 2025 05:43:53 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-oAGUNHmrZ8tm34xpi0rRQHJK\u002BvhMV6Ipy1NDk1LJgVU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"21014"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022oAGUNHmrZ8tm34xpi0rRQHJK\u002BvhMV6Ipy1NDk1LJgVU=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Jan 2025 05:47:42 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/NiceAdmin/assets/img/apple-touch-icon.k5niu5bqjf.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\apple-touch-icon.png'))</AssetFile>

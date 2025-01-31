@@ -8,7 +8,7 @@ using NiceAdmin.Models;
 
 namespace NiceAdmin.Controllers;
 
-
+[CheckAccess]
 public class ProductController : Controller
 {
     private IConfiguration configuration;

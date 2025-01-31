@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6CSb1moM1voqETyTnMMOVxw3vIChFH4dFD09Bna/o6o=",
+  "Hash": "x3VUAmNGGVBFDH6/3hxug5XGN/RssBm5jr1R/OWhu9A=",
   "Source": "NiceAdmin",
   "BasePath": "_content/NiceAdmin",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "f4zzqunbnh",
-      "Integrity": "j151mQhwlNlq1v8nS82zgYOozg28SGy3UFJMpZBR598=",
+      "Fingerprint": "825wsxuick",
+      "Integrity": "oAGUNHmrZ8tm34xpi0rRQHJK+vhMV6Ipy1NDk1LJgVU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\style.css"
@@ -15202,6 +15202,51 @@
   ],
   "Endpoints": [
     {
+      "Route": "assets/css/style.825wsxuick.css",
+      "AssetFile": "E:\\sem 5\\.net\\Audi\\NiceAdmin\\wwwroot\\assets\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21014"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oAGUNHmrZ8tm34xpi0rRQHJK+vhMV6Ipy1NDk1LJgVU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 05:47:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "825wsxuick"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oAGUNHmrZ8tm34xpi0rRQHJK+vhMV6Ipy1NDk1LJgVU="
+        }
+      ]
+    },
+    {
       "Route": "assets/css/style.css",
       "AssetFile": "E:\\sem 5\\.net\\Audi\\NiceAdmin\\wwwroot\\assets\\css\\style.css",
       "Selectors": [],
@@ -15212,7 +15257,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "22625"
+          "Value": "21014"
         },
         {
           "Name": "Content-Type",
@@ -15220,11 +15265,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"j151mQhwlNlq1v8nS82zgYOozg28SGy3UFJMpZBR598=\""
+          "Value": "\"oAGUNHmrZ8tm34xpi0rRQHJK+vhMV6Ipy1NDk1LJgVU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Jan 2025 05:43:53 GMT"
+          "Value": "Wed, 22 Jan 2025 05:47:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15234,52 +15279,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-j151mQhwlNlq1v8nS82zgYOozg28SGy3UFJMpZBR598="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/style.f4zzqunbnh.css",
-      "AssetFile": "E:\\sem 5\\.net\\Audi\\NiceAdmin\\wwwroot\\assets\\css\\style.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "22625"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"j151mQhwlNlq1v8nS82zgYOozg28SGy3UFJMpZBR598=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 22 Jan 2025 05:43:53 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "f4zzqunbnh"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/style.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-j151mQhwlNlq1v8nS82zgYOozg28SGy3UFJMpZBR598="
+          "Value": "sha256-oAGUNHmrZ8tm34xpi0rRQHJK+vhMV6Ipy1NDk1LJgVU="
         }
       ]
     },
