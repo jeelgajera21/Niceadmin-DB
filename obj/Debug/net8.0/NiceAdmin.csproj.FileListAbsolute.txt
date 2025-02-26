@@ -30,8 +30,6 @@ E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\System.Data.SqlClient.dll
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
-E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\sem 5\.net\Audi\NiceAdmin\obj\Debug\net8.0\NiceAdmin.csproj.AssemblyReference.cache
 E:\sem 5\.net\Audi\NiceAdmin\obj\Debug\net8.0\NiceAdmin.csproj.Up2Date
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
@@ -40,8 +38,6 @@ E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\EPPlus.dll
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\EPPlus.Interfaces.dll
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\EPPlus.System.Drawing.dll
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
-E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
-E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\MailKit.dll
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\MimeKit.dll
@@ -70,3 +66,14 @@ E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\tr-TR\Hangfire.Core.resources.dll
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\zh-TW\Hangfire.Core.resources.dll
 E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\zh\Hangfire.Core.resources.dll
 E:\sem 5\.net\Audi\NiceAdmin\obj\Debug\net8.0\NiceAdmin.sourcelink.json
+E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\System.IO.Pipelines.dll
+E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\System.Text.Json.dll
+E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+E:\sem 5\.net\Audi\NiceAdmin\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll

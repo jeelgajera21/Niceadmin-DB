@@ -14,18 +14,7 @@ namespace NiceAdmin.Controllers
         private readonly IRecurringJobManager _recurringJobManager;
         private readonly MailSettings _mailSettings;
 
-       /* HangFireEmailController(IOptions<MailSettings> mailSettings)
-        {
-            *//*if (mailSettings == null || mailSettings.Value == null)
-            {
-                throw new ArgumentNullException(nameof(mailSettings), "MailSettings is not configured properly.");
-            }
-            _mailSettings = mailSettings.Value;
-
-            // Log the values to confirm they are being injected
-            Console.WriteLine($"MailSettings - Mail: {_mailSettings.Mail}, Host: {_mailSettings.Host}, Port: {_mailSettings.Port}");*//*
-        }*/
-
+       
 
 
         public HangFireEmailController(IBackgroundJobClient backgroundJobClient, IRecurringJobManager recurringJobManager, IOptions<MailSettings> mailSettings)

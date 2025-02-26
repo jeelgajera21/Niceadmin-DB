@@ -10,7 +10,6 @@ builder.Services.AddHangfire(config =>
 builder.Services.AddHangfireServer();  // Add Hangfire background job server
 
 
-
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
